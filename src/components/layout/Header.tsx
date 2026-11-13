@@ -12,6 +12,7 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { cn } from "@/lib/utils";
 import { MobileNav } from "./MobileNav";
 import styles from "./Header.module.css";
+import { BrandLogo } from "@/components/common/BrandLogo";
 
 const MEGA_MENU_META: Record<
   string,
@@ -142,14 +143,7 @@ export function Header() {
               setMobileMenuOpen(false);
             }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={SITE_ASSETS.brand.wordmark}
-              alt="NAVCHETNAA AI"
-              width={212}
-              height={36}
-              className={styles.brandLogo}
-            />
+            <BrandLogo priority />
           </Link>
 
           {/* Desktop Primary Navigation */}

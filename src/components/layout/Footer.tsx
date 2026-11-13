@@ -3,6 +3,7 @@ import { Mail, MessageSquare, ArrowUpRight } from "lucide-react";
 import { SITE_CONFIG } from "@/data/site";
 import { SITE_ASSETS } from "@/data/assets";
 import styles from "./Footer.module.css";
+import { BrandLogo } from "@/components/common/BrandLogo";
 
 const SERVICE_LINKS = [
   { label: "AI Development & Automation", href: "/services/ai-development-automation" },
@@ -48,14 +49,7 @@ export function Footer() {
         {/* Column 1: Brand & Verified Contact */}
         <div className={styles.brandCol}>
           <Link href="/" aria-label="NAVCHETNAA AI Home">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={SITE_ASSETS.brand.wordmark}
-              alt="NAVCHETNAA AI"
-              width={212}
-              height={36}
-              className={styles.logo}
-            />
+            <BrandLogo />
           </Link>
           <p className={styles.tagline}>{SITE_CONFIG.tagline}</p>
           <p className={styles.aboutText}>

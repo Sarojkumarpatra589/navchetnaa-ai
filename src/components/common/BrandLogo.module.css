@@ -1,0 +1,74 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  user-select: none;
+}
+
+.markWrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+}
+
+.brand:hover .markWrapper {
+  transform: scale(1.04);
+}
+
+.markImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.wordmarkGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--color-dark-text);
+  line-height: 1;
+}
+
+.aiBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.22rem 0.45rem;
+  background-color: var(--color-dark-text);
+  color: var(--color-lime);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border-radius: var(--radius-xs);
+  line-height: 1;
+}
+
+/* Compact mode for tight mobile screens (< 380px) */
+@media (max-width: 380px) {
+  .brandName {
+    font-size: 0.96rem;
+  }
+
+  .markWrapper {
+    width: 35px;
+    height: 35px;
+  }
+}
