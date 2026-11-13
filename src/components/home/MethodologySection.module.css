@@ -1,0 +1,85 @@
+.section {
+  padding-block: var(--section-py);
+  background-color: var(--color-soft-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.headerRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  justify-content: space-between;
+  margin-bottom: var(--space-12);
+}
+
+@media (min-width: 900px) {
+  .headerRow {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.pipeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .pipeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1180px) {
+  .pipeline {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: var(--space-3);
+  }
+}
+
+.stageCard {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-strong);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  position: relative;
+  transition:
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.stageCard:hover {
+  border-color: var(--color-dark-text);
+  transform: translateY(-2px);
+}
+
+.stageTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stepBadge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--color-dark-text);
+  color: var(--color-lime);
+}
+
+.stageTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-dark-text);
+}
+
+.stageDesc {
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--color-secondary-text);
+}

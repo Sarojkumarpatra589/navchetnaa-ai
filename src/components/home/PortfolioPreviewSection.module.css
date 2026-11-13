@@ -1,0 +1,130 @@
+.section {
+  padding-block: var(--section-py);
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.headerRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  justify-content: space-between;
+  margin-bottom: var(--space-12);
+}
+
+@media (min-width: 900px) {
+  .headerRow {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 980px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.card {
+  border: 1px solid var(--color-border-strong);
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.card:hover {
+  border-color: var(--color-dark-text);
+  box-shadow: var(--shadow-md);
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background-color: var(--color-soft-white);
+  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .image {
+  transform: scale(1.03);
+}
+
+.classificationTag {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  padding: 0.28rem 0.6rem;
+  background-color: rgba(16, 24, 32, 0.9);
+  color: var(--color-lime);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.body {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  gap: var(--space-5);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-dark-text);
+  margin-bottom: var(--space-2);
+}
+
+.summary {
+  font-size: 0.925rem;
+  line-height: 1.62;
+  color: var(--color-secondary-text);
+}
+
+.stackRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.stackChip {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.22rem 0.55rem;
+  background-color: var(--color-soft-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-dark-text);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-dark-text);
+}

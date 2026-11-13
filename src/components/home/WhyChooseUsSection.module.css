@@ -1,0 +1,69 @@
+.section {
+  padding-block: var(--section-py);
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.grid {
+  margin-top: var(--space-12);
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--color-border-strong);
+  border-left: 1px solid var(--color-border-strong);
+}
+
+@media (min-width: 680px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1060px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.cell {
+  padding: var(--space-8);
+  border-right: 1px solid var(--color-border-strong);
+  border-bottom: 1px solid var(--color-border-strong);
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: background-color var(--transition-fast);
+}
+
+.cell:hover {
+  background-color: var(--color-soft-white);
+}
+
+.number {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--color-dark-text);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.numberBar {
+  width: 14px;
+  height: 3px;
+  background-color: var(--color-lime);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-dark-text);
+}
+
+.description {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--color-secondary-text);
+}

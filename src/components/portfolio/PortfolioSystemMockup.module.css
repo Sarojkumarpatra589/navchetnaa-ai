@@ -1,0 +1,115 @@
+.blueprint {
+  background-color: var(--color-dark-text);
+  color: var(--color-white);
+  border: 1px solid var(--color-dark-text);
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.blueprint::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--color-lime) 0%,
+    var(--color-aqua) 50%,
+    var(--color-cyan) 100%
+  );
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-lime);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #E2E8F0;
+}
+
+.layersGrid {
+  margin-top: var(--space-6);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 860px) {
+  .layersGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.layerCard {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.layerTag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--color-aqua);
+  letter-spacing: 0.06em;
+}
+
+.layerName {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.layerItems {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.layerItem {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: #CBD5E1;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--color-lime);
+}

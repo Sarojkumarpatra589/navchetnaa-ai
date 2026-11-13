@@ -1,0 +1,114 @@
+.section {
+  padding-block: var(--section-py);
+  background-color: var(--color-soft-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: var(--space-16);
+  }
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.proseGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.prose {
+  font-size: 1.05rem;
+  line-height: var(--leading-relaxed);
+  color: var(--color-secondary-text);
+}
+
+.linkRow {
+  padding-top: var(--space-2);
+}
+
+.inlineLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-dark-text);
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--color-lime);
+  transition: gap var(--transition-fast);
+}
+
+.inlineLink:hover {
+  gap: var(--space-3);
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.pillarCard {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  position: relative;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.pillarCard:hover {
+  border-color: var(--color-dark-text);
+  box-shadow: var(--shadow-sm);
+}
+
+.pillarTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pillarIndex {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-muted-text);
+}
+
+.pillarAccent {
+  width: 18px;
+  height: 3px;
+  background-color: var(--color-lime);
+}
+
+.pillarTitle {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-dark-text);
+}
+
+.pillarDesc {
+  font-size: 0.925rem;
+  line-height: 1.6;
+  color: var(--color-muted-text);
+}

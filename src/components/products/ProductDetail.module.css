@@ -1,0 +1,230 @@
+.section {
+  padding-block: var(--section-py);
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sectionSoft {
+  padding-block: var(--section-py);
+  background-color: var(--color-soft-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Overview Stack */
+.productsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.productBanner {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-strong);
+  padding: clamp(1.75rem, 4vw, 3rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  position: relative;
+}
+
+@media (min-width: 980px) {
+  .productBanner {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+}
+
+.productBanner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 64px;
+  height: 3px;
+  background-color: var(--color-lime);
+}
+
+.statusPill {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.28rem 0.65rem;
+  background-color: var(--color-soft-white);
+  border: 1px solid var(--color-border-strong);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-text);
+}
+
+.productTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 2.8vw, 2.25rem);
+  font-weight: 800;
+  color: var(--color-dark-text);
+  margin-top: var(--space-3);
+}
+
+.productSummary {
+  font-size: 1rem;
+  line-height: 1.68;
+  color: var(--color-secondary-text);
+  margin-top: var(--space-3);
+}
+
+.highlightsBox {
+  background-color: var(--color-soft-white);
+  border: 1px solid var(--color-border);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* Detail Grids */
+.twoColGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 960px) {
+  .twoColGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-10);
+  }
+}
+
+.gridThree {
+  margin-top: var(--space-10);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .gridThree {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1080px) {
+  .gridThree {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.gridFour {
+  margin-top: var(--space-10);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .gridFour {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1060px) {
+  .gridFour {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.cardSoft {
+  background-color: var(--color-soft-white);
+  border: 1px solid var(--color-border-strong);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.monoCode {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-muted-text);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-dark-text);
+}
+
+.cardDesc {
+  font-size: 0.935rem;
+  line-height: 1.62;
+  color: var(--color-secondary-text);
+}
+
+/* Modules & Programs Chip Grid (CollegeOS) */
+.chipGrid {
+  margin-top: var(--space-6);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.moduleChip {
+  padding: 0.5rem 0.9rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-strong);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-dark-text);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.moduleDot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-lime);
+  border: 1px solid var(--color-dark-text);
+}
+
+.checkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.checkItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: var(--color-secondary-text);
+}
+
+.stepBadge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.22rem 0.55rem;
+  background-color: var(--color-dark-text);
+  color: var(--color-lime);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+}

@@ -1,0 +1,227 @@
+.window {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-strong);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.topBar {
+  background-color: var(--color-dark-text);
+  color: var(--color-white);
+  padding: 0.75rem 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.windowControls {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.dotLime {
+  background-color: var(--color-lime);
+}
+
+.windowTitle {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #E2E8F0;
+}
+
+.previewBadge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  background-color: rgba(140, 238, 63, 0.16);
+  border: 1px solid rgba(140, 238, 63, 0.5);
+  color: var(--color-lime);
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 860px) {
+  .workspace {
+    grid-template-columns: 220px 1fr;
+  }
+}
+
+.sidebar {
+  background-color: var(--color-soft-white);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+@media (min-width: 860px) {
+  .sidebar {
+    border-bottom: none;
+    border-right: 1px solid var(--color-border);
+  }
+}
+
+.sidebarLabel {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-muted-text);
+  margin-bottom: var(--space-1);
+}
+
+.navPill {
+  padding: 0.45rem 0.65rem;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-secondary-text);
+  border-left: 2px solid transparent;
+}
+
+.navPillActive {
+  background-color: var(--color-white);
+  color: var(--color-dark-text);
+  border-left-color: var(--color-lime);
+  border-top: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mainArea {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.panelHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.panelTitle {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-dark-text);
+}
+
+.statusTag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  background-color: var(--color-soft-white);
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-dark-text);
+}
+
+.cardsRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .cardsRow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.miniCard {
+  background-color: var(--color-soft-white);
+  border: 1px solid var(--color-border);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.miniLabel {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  color: var(--color-muted-text);
+}
+
+.miniValue {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-dark-text);
+}
+
+.tableBox {
+  border: 1px solid var(--color-border);
+  overflow-x: auto;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 1.2fr 1.4fr 0.9fr;
+  gap: var(--space-3);
+  padding: 0.72rem 0.95rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.82rem;
+  align-items: center;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableHeader {
+  background-color: var(--color-soft-white);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-muted-text);
+}
+
+.badgeGreen {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.18rem 0.5rem;
+  background-color: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  color: #15803D;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.badgeSlate {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.18rem 0.5rem;
+  background-color: var(--color-soft-white);
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-dark-text);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+}

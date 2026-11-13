@@ -1,0 +1,104 @@
+.hero {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  padding-block: clamp(3rem, 6vw, 5rem);
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  align-items: center;
+}
+
+.gridWithImage {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .gridWithImage {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--space-12);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.eyebrowRow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.35rem 0.75rem;
+  background-color: var(--color-soft-white);
+  border: 1px solid var(--color-border);
+  width: fit-content;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-lime);
+  border: 1px solid var(--color-dark-text);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-dark-text);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2.125rem, 4.2vw, 3.375rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-dark-text);
+}
+
+.description {
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  line-height: var(--leading-relaxed);
+  color: var(--color-muted-text);
+  max-width: 65ch;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.mediaFrame {
+  position: relative;
+  border: 1px solid var(--color-border-strong);
+  background-color: var(--color-soft-white);
+  padding: var(--space-2);
+}
+
+.mediaFrame::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 36px;
+  height: 3px;
+  background-color: var(--color-lime);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+}

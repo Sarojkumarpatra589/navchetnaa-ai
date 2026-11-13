@@ -1,0 +1,85 @@
+.siteContainer {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-px);
+}
+
+.siteContainerNarrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-inline: auto;
+  padding-inline: var(--container-px);
+}
+
+.sectionSpace {
+  padding-block: var(--section-py);
+}
+
+.sectionSpaceSm {
+  padding-block: var(--section-py-sm);
+}
+
+.surfaceWhite {
+  background-color: var(--color-white);
+}
+
+.surfaceSoft {
+  background-color: var(--color-soft-white);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.surfaceDark {
+  background-color: var(--color-dark-text);
+  color: var(--color-white);
+}
+
+/* Subtle Architectural Engineering Grid Background */
+.architecturalGrid {
+  background-image:
+    linear-gradient(to right, rgba(16, 24, 32, 0.032) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 24, 32, 0.032) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Glass Surface */
+.glassSurface {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--color-border);
+}
+
+/* Screen Reader Accessibility Helper */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip to Content Link for Keyboard Navigation */
+.skipLink {
+  position: fixed;
+  top: -100px;
+  left: var(--space-4);
+  z-index: 999;
+  padding: var(--space-3) var(--space-5);
+  background: var(--color-dark-text);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border: 2px solid var(--color-lime);
+  transition: top var(--transition-fast);
+}
+
+.skipLink:focus {
+  top: var(--space-4);
+}

@@ -1,0 +1,170 @@
+.drawer {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-mobile-menu);
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  transform-origin: top center;
+}
+
+.drawerInner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding: var(--space-6) var(--container-px) var(--space-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-border);
+}
+
+.navItem {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.itemRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52px;
+}
+
+.itemLink {
+  flex: 1;
+  padding-block: var(--space-3);
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-dark-text);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.itemLinkActive {
+  color: var(--color-dark-text);
+}
+
+.activeBadge {
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-lime);
+  border: 1px solid var(--color-dark-text);
+}
+
+.accordionTrigger {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--color-dark-text);
+}
+
+.accordionTrigger:hover {
+  background-color: var(--color-soft-white);
+}
+
+.chevron {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition-fast);
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+/* Nested Submenu */
+.subMenuWrapper {
+  overflow: hidden;
+}
+
+.subMenuList {
+  list-style: none;
+  padding: var(--space-2) 0 var(--space-4) var(--space-4);
+  border-left: 2px solid var(--color-lime);
+  margin-left: var(--space-1);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.subMenuLink {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-xs);
+  transition: background-color var(--transition-fast);
+}
+
+.subMenuLink:hover,
+.subMenuLinkActive {
+  background-color: var(--color-soft-white);
+}
+
+.subMenuTitle {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-dark-text);
+}
+
+.subMenuDesc {
+  font-size: 0.8125rem;
+  color: var(--color-muted-text);
+  line-height: 1.4;
+}
+
+/* Bottom Mobile CTAs */
+.mobileFooter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+}
+
+.primaryCta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: 0.9rem var(--space-5);
+  background-color: var(--color-dark-text);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: 1px solid var(--color-dark-text);
+  border-radius: var(--radius-xs);
+}
+
+.secondaryCta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: 0.85rem var(--space-5);
+  background-color: var(--color-soft-white);
+  color: var(--color-dark-text);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-xs);
+}
